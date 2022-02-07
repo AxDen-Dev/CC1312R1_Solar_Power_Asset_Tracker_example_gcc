@@ -1,0 +1,79 @@
+digraph Model
+{
+    graph[rankdir=LR]
+
+    // mod.$name=/ti/common/multi_stack_validate
+
+    // mod.$name=/ti/devices/CCFG
+    ti_devices_CCFG -> ti_devices_CCFGTemplate0
+
+    // mod.$name=/ti/devices/CCFGTemplate
+
+    // mod.$name=/ti/devices/DriverLib
+
+    // mod.$name=/ti/devices/radioconfig/code_export_param
+
+    // mod.$name=/ti/devices/radioconfig/rfdesign
+
+    // mod.$name=/ti/devices/radioconfig/settings/prop
+    EasyLink_RF_SLR5KBPS_Setting -> ti_drivers_RF
+    EasyLink_RF_SLR5KBPS_Setting -> ti_devices_radioconfig_rfdesign
+    EasyLink_RF_SLR5KBPS_Setting -> ti_devices_radioconfig_code_export_param1
+
+    // mod.$name=/ti/dpl/Settings
+
+    // mod.$name=/ti/drivers/ADC
+    CONFIG_ADC_0 -> ti_drivers_Power
+    CONFIG_ADC_0 -> ti_drivers_Board
+    CONFIG_ADC_0 -> CONFIG_PIN_0
+
+    // mod.$name=/ti/drivers/Board
+    ti_drivers_Board -> ti_devices_DriverLib
+    ti_drivers_Board -> ti_dpl_Settings
+
+    // mod.$name=/ti/drivers/DMA
+    ti_drivers_DMA -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/I2C
+    CONFIG_I2C_0 -> ti_drivers_Power
+    CONFIG_I2C_0 -> ti_drivers_Board
+    CONFIG_I2C_0 -> CONFIG_PIN_1
+    CONFIG_I2C_0 -> CONFIG_PIN_2
+
+    // mod.$name=/ti/drivers/PIN
+    ti_drivers_PIN -> ti_drivers_Power
+    ti_drivers_PIN -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/Power
+    ti_drivers_Power -> ti_devices_CCFG
+    ti_drivers_Power -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RF
+    ti_drivers_RF -> ti_drivers_Power
+    ti_drivers_RF -> ti_drivers_Board
+
+    // mod.$name=/ti/drivers/RTOS
+
+    // mod.$name=/ti/drivers/UART
+    CONFIG_UART_0 -> ti_drivers_Power
+    CONFIG_UART_0 -> ti_drivers_Board
+    CONFIG_UART_0 -> CONFIG_PIN_3
+    CONFIG_UART_0 -> CONFIG_PIN_4
+
+    // mod.$name=/ti/drivers/UART2
+    CONFIG_UART2_0 -> ti_drivers_DMA
+    CONFIG_UART2_0 -> ti_drivers_Power
+    CONFIG_UART2_0 -> ti_drivers_Board
+    CONFIG_UART2_0 -> CONFIG_PIN_5
+    CONFIG_UART2_0 -> CONFIG_PIN_6
+
+    // mod.$name=/ti/drivers/Watchdog
+    CONFIG_WATCHDOG_0 -> ti_drivers_Power
+    CONFIG_WATCHDOG_0 -> ti_drivers_Board
+
+    // mod.$name=/ti/easylink/easylink
+    ti_easylink_easylink -> ti_drivers_RF
+    ti_easylink_easylink -> ti_devices_radioconfig_rfdesign
+    ti_easylink_easylink -> ti_common_multi_stack_validate
+    ti_easylink_easylink -> EasyLink_RF_SLR5KBPS_Setting
+}

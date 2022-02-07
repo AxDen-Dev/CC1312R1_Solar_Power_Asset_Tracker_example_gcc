@@ -1,0 +1,76 @@
+/**
+ * These arguments were used when this file was generated. They will be automatically applied on subsequent loads
+ * via the GUI or CLI. Run CLI with '--help' for additional information on how to override these arguments.
+ * @cliArgs --device "CC1312R1F3RGZ" --package "RGZ" --part "Default" --product "simplelink_cc13x2_26x2_sdk@5.20.00.52"
+ * @versions {"tool":"1.9.0+2015","templates":null}
+ */
+
+/**
+ * Import the modules used in this configuration.
+ */
+const CCFG      = scripting.addModule("/ti/devices/CCFG");
+const rfdesign  = scripting.addModule("/ti/devices/radioconfig/rfdesign");
+const ADC       = scripting.addModule("/ti/drivers/ADC", {}, false);
+const ADC1      = ADC.addInstance();
+const Board     = scripting.addModule("/ti/drivers/Board");
+const I2C       = scripting.addModule("/ti/drivers/I2C", {}, false);
+const I2C1      = I2C.addInstance();
+const RF        = scripting.addModule("/ti/drivers/RF");
+const RTOS      = scripting.addModule("/ti/drivers/RTOS");
+const UART      = scripting.addModule("/ti/drivers/UART", {}, false);
+const UART1     = UART.addInstance();
+const UART2     = scripting.addModule("/ti/drivers/UART2", {}, false);
+const UART21    = UART2.addInstance();
+const Watchdog  = scripting.addModule("/ti/drivers/Watchdog", {}, false);
+const Watchdog1 = Watchdog.addInstance();
+const easylink  = scripting.addModule("/ti/easylink/easylink");
+
+/**
+ * Write custom configuration values to the imported modules.
+ */
+CCFG.enableBootloaderBackdoor = true;
+CCFG.dioBootloaderBackdoor    = 13;
+CCFG.levelBootloaderBackdoor  = "Active low";
+CCFG.ccfgTemplate.$name       = "ti_devices_CCFGTemplate0";
+
+ADC1.$name                = "CONFIG_ADC_0";
+ADC1.adc.adcPin.$assign   = "ball.37";
+ADC1.adcPinInstance.$name = "CONFIG_PIN_0";
+
+Board.generateInitializationFunctions = false;
+
+I2C1.$name                = "CONFIG_I2C_0";
+I2C1.i2c.sdaPin.$assign   = "ball.9";
+I2C1.i2c.sclPin.$assign   = "ball.8";
+I2C1.sdaPinInstance.$name = "CONFIG_PIN_1";
+I2C1.clkPinInstance.$name = "CONFIG_PIN_2";
+
+UART1.$name               = "CONFIG_UART_0";
+UART1.uart.txPin.$assign  = "ball.16";
+UART1.uart.rxPin.$assign  = "ball.15";
+UART1.txPinInstance.$name = "CONFIG_PIN_3";
+UART1.rxPinInstance.$name = "CONFIG_PIN_4";
+
+UART21.$name               = "CONFIG_UART2_0";
+UART21.uart.txPin.$assign  = "ball.27";
+UART21.uart.rxPin.$assign  = "ball.26";
+UART21.txPinInstance.$name = "CONFIG_PIN_5";
+UART21.rxPinInstance.$name = "CONFIG_PIN_6";
+
+Watchdog1.$name = "CONFIG_WATCHDOG_0";
+
+easylink.addrSize                                               = 8;
+easylink.EasyLink_Phy_5kbpsSlLr                                 = true;
+easylink.EasyLink_Phy_Custom                                    = false;
+easylink.radioConfigEasylinkPhy5kbpssllr.codeExportConfig.$name = "ti_devices_radioconfig_code_export_param1";
+
+/**
+ * Pinmux solution for unlocked pins/peripherals. This ensures that minor changes to the automatic solver in a future
+ * version of the tool will not impact the pinmux you originally saw.  These lines can be completely deleted in order to
+ * re-solve from scratch.
+ */
+ADC1.adc.$suggestSolution           = "ADC0";
+I2C1.i2c.$suggestSolution           = "I2C0";
+UART1.uart.$suggestSolution         = "UART1";
+UART21.uart.$suggestSolution        = "UART0";
+Watchdog1.watchdog.$suggestSolution = "WDT0";
