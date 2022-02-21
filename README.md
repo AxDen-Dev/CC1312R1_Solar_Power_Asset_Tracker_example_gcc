@@ -26,6 +26,12 @@ Sub-G Solar Power Asset Tracker uses AxDen's Aggregator Platform to collect key 
 This is an example that provides a quick test for various service scenarios that require long-distance communication of 1Km or more or 2G/3G/4G communication.
 <br>
 
+네이버 스마트 스토어에서 구매 가능합니다.
+<br>
+
+[네이버 스마트 스토어](https://smartstore.naver.com/axden)
+<br>
+
 ### Sub-G Solar Power Asset Tracker 의 주요 특징 및 기능
 
 MCU | 설명
@@ -58,12 +64,12 @@ AxDen Aggregator Platform 과 연동하여 서버, DB 와 같은 인프라 구�
 AxDen Aggregator Platform 에 저장된 센서 정보를 이용하여 Edge AI 를 학습시킵니다.
 <br>
 
-#### 터미널을 이용한 확인 방법
+### 터미널을 이용한 확인 방법
 어댑터 보드가 있다면 터미널을 통해 통신 확인이 가능합니다.
 <br>
 어덥테 보드를 PC 에 연결합니다.
 
-#### 서버를 이용한 확인 방법
+### 서버를 이용한 확인 방법
 TCP 서버가 있다면 서버를 통해 확인이 가능합니다.
 <br>
 해당 예제에는 AxDen 에서 제공하는 예제 서버의 IP 와 Port 번호가 임시로 지정되어 있습니다.
@@ -78,11 +84,11 @@ TCP 서버가 있다면 서버를 통해 확인이 가능합니다.
   </tr>
 </table>
 
-#### Solar battery charge 확인 방법
+### Solar battery charge 확인 방법
 아래 이미지와 같이 멀티미터를 이용하여 태양광을 이용한 배터리 충전 전류량을 확인할 수 있습니다.
 <img src="./asset/CharCurrent.png">
 
-#### AxDen Aggregator Platform 을 이용한 확인 방법
+### AxDen Aggregator Platform 을 이용한 확인 방법
 AxDen Aggregator 홈페이지에서 회원 가입 후 기기의 MAC Address 를 등록합니다.
 <br>
 AxDen Aggregator 홈페이지에서 제공하는 COMPANY ID, DEVICE ID 를 Protocol.h 파일의 COMPANY_ID, DEVICE_ID 에 입력합니다.
