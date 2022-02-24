@@ -78,7 +78,6 @@ Connect the AA-MB-05 board to the PC.
 
 If you have a TCP server, you can check it through the server.
 <br>
-해당 예제에는 AxDen 에서 제공하는 예제 서버의 IP 와 Port 번호가 임시로 지정되어 있습니다.
 In this example, the IP and Port number of the example server provided by AXDEN are temprarily set.
 <table>
   <tr align="center">
