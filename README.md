@@ -1,7 +1,8 @@
 # Sub-G Solar Power Asset Tracker
-
+<div align="center">
 <img src="./asset/main_image.png">
-
+</div>
+<br>
 <table>
 <tr>
 <tr align="center">
@@ -21,27 +22,32 @@ Sub-G Solar Power Asset Tracker 은 AxDen 의 Aggregator Platform 를 이용하�
 1Km 의 이상의 장거리 통신 또는 2G/3G/4G 통신이 필요한 다양한 서비스 시나리오를 빠르게 테스트 할 수 있도록 제공하는 예제입니다.
 <br>
 <br>
+관련 하드웨어 키트는 네이버 스마트 스토어에서 구매 가능합니다.
+<br>
+[구매링크 : 네이버 스마트 스토어](https://smartstore.naver.com/axden)
+<br>
+<br>
 Sub-G Solar Power Asset Tracker uses AxDen's Aggregator Platform to collect key information required for asset tracking such as temperature, acceleration, and GPS location.
 <br>
 This is an example that provides a quick test for various service scenarios that require long-distance communication of 1Km or more or 2G/3G/4G communication.
 <br>
-
-네이버 스마트 스토어에서 구매 가능합니다.
 <br>
-
-[네이버 스마트 스토어](https://smartstore.naver.com/axden)
+Related hardware kits can be purchased from the Naver Smart Store.
 <br>
+[Purchase Link : naver smart store](https://smartstore.naver.com/axden)
+<br>
+<br>
+## Sub-G Solar Power Asset Tracker 의 주요 특징 및 기능
 
-### Sub-G Solar Power Asset Tracker 의 주요 특징 및 기능
-
-MCU | 설명
+MCU | Description
 :-------------------------:|:-------------------------:
 CC1312R1 | TI ROTS, EasyLink
 
-*TI Sensor Controller 이용한 저전력 기술은 Production version 제품군에서 확인하실 수 있습니다.*
+*\* TI Sensor Controller 이용한 저전력 기술은 Production version 제품군에서 확인하실 수 있습니다.*
+<br>
+*\* Low-power technology with TI Sensor Controller is available in the Production version family.*
 
-
-센서 | 설명
+Sensor | Description
 :-------------------------:|:-------------------------:
 BMA400 | 3-Axis acceleration sensor
 SI7051 | temperature sensor
