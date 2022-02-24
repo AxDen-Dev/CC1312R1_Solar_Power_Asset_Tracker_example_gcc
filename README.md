@@ -40,7 +40,7 @@ CC1312R1 | TI ROTS, EasyLink
 
 *\* Low-power technology with TI Sensor Controller is available in the Production version family.*
 
-Sensor | Description
+Sensors | Description
 :-------------------------:|:-------------------------:
 BMA400 | 3-Axis acceleration sensor
 SI7051 | temperature sensor
@@ -171,7 +171,7 @@ When L70 in used, -> #define UBLOX_GPS / Annotated
 <br>
 When NEO-M8N in used -> #define QUECTEL_GPS / Annotated
 
-## Hardware Pinmap
+### Hardware Pinmap
 You can check in the board_define.h header file.
 
 ----
