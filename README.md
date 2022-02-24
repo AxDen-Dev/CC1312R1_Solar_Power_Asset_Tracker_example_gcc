@@ -27,12 +27,12 @@ Related hardware kits can be purchased from the Naver Smart Store.
 [Purchase Link : naver smart store](https://smartstore.naver.com/axden)
 <br>
 <br>
-You can purchase it by contacting sales@axden.io
+You can purchase it by contacting sales@axden.io or [www.axden.io](http://www.axden.io/)
 <br>
 
 -------------------------
 
-## Key features and functions.
+### Key features and functions.
 
 MCU | Description
 :-------------------------:|:-------------------------:
